@@ -10,7 +10,7 @@ let command;
 var started = false;
 
 const GetIngest = async () => {
-    const res = await axios.get("https://ingest.twitch.tv/ingests");
+    const res = await axios.get("rtmps://live-api-s.facebook.com:443/rtmp/");
     return res.data.ingests[0].url_template.replace("{stream_key}", process.env.STREAM_KEY);
 }
 
